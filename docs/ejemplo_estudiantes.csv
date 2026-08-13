@@ -1,0 +1,4 @@
+cedula,nombres,apellidos,fecha_nacimiento,genero,telefono,email,nombre_representante,telefono_representante,id_seccion
+2011111111,Roberto,Nuñez,2018-03-12,M,0987654321,roberto.nunez@email.com,Carmen Nuñez,0981112233,1
+2011111112,Valeria,Castro,2018-07-25,F,0987654322,valeria.castro@email.com,Luis Castro,0981112234,1
+2011111113,Gabriel,Mora,2017-11-08,M,0987654323,gabriel.mora@email.com,Ana Mora,0981112235,2

@@ -1,0 +1,100 @@
+<!-- Punto de entrada de la aplicación, cargando la vista de login o la vista principal según el estado de autenticación del usuario -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Escolar</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- LOGIN -->
+    <div id="loginPage" class="login-page">
+        <div class="login-card">
+            <div class="logo">
+                <h1>📚 Control Escolar</h1>
+                <p>Sistema de Gestión Educativa</p>
+            </div>
+            <div id="loginAlert"></div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label>Usuario</label>
+                    <input type="text" id="loginUser" class="form-control" placeholder="Ingrese su usuario" required autocomplete="username">
+                </div>
+                <div class="form-group">
+                    <label>Contraseña</label>
+                    <input type="password" id="loginPass" class="form-control" placeholder="Ingrese su contraseña" required autocomplete="current-password">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block" style="margin-top:10px;padding:12px;">
+                    Iniciar Sesión
+                </button>
+            </form>
+            <p style="text-align:center;margin-top:20px;font-size:0.8rem;color:#94a3b8;">
+                Usuario admin: <strong>admin</strong> / <strong>admin123</strong>
+            </p>
+            <p style="text-align:center;margin-top:20px;font-size:0.8rem;color:#94a3b8;">
+                Usuario secretaria: <strong>secretaria</strong> / <strong>secre123</strong>
+            </p>
+            <p style="text-align:center;margin-top:20px;font-size:0.8rem;color:#94a3b8;">
+                Usuario docente: <strong>docente1</strong> / <strong>docente123</strong>
+            </p>
+            <p style="text-align:center;margin-top:20px;font-size:0.8rem;color:#94a3b8;">
+                Usuario alumno: <strong>alumno1</strong> / <strong>alumno123</strong>
+            </p>
+        </div>
+    </div>
+
+    <!-- APP -->
+    <div id="appLayout" class="app-layout page-hidden">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>📚 Control Escolar</h2>
+                <span>Gestión Educativa</span>
+            </div>
+            <nav class="sidebar-nav" id="sidebarNav">
+                <!-- Se genera dinámicamente según el rol -->
+            </nav>
+        </aside>
+
+        <!-- Main -->
+        <div class="main-content">
+            <header class="topbar">
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <button class="menu-toggle" id="menuToggle">☰</button>
+                    <h3 id="pageTitle">Dashboard</h3>
+                </div>
+                <div class="user-info">
+                    <div class="details">
+                        <div class="name" id="userName">Usuario</div>
+                        <div class="role" id="userRole">Rol</div>
+                    </div>
+                    <div class="avatar" id="userAvatar">U</div>
+                    <button class="btn btn-outline btn-sm" id="btnLogout" title="Cerrar sesión">Salir</button>
+                </div>
+            </header>
+
+            <div class="content-area" id="contentArea">
+                <!-- Contenido dinámico -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal genérico -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h4 id="modalTitle">Título</h4>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+            <div class="modal-footer" id="modalFooter"></div>
+        </div>
+    </div>
+
+    <!-- Toasts -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>

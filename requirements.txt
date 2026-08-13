@@ -1,0 +1,10 @@
+Flask
+Flask-CORS
+psycopg2-binary
+python-dotenv
+Werkzeug
+reportlab
+openpyxl
+qrcode
+Pillow
+requests
